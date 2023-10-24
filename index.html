@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<link type="image/png" sizes="16x16" rel="icon" href="assets/favicon/icons8-dice-flaticons-lineal-color-16.png" />
+<link type="image/png" sizes="32x32" rel="icon" href="assets/favicon/icons8-dice-flaticons-lineal-color-32.png" />
+<link type="image/png" sizes="96x96" rel="icon" href="assets/favicon/icons8-dice-flaticons-lineal-color-96.png" />
+<link rel="stylesheet" href="assets/css/style.css">
+
+
+<title>Fast Quizzes</title>
+
+<body onload="NextQuestion(0)">
+    <main>
+
+        <div class="game-quiz-container">
+            <h2>The New Zealand Quiz <i class="fa-solid fa-cable-car"></i></h2>
+            <p>What do you know about this awesome country?</p>
+
+            <div class="game-details-container">
+                <h1>Score : <span id="player-score"></span> / 5</h1>
+                <h1> Question : <span id="question-number"></span> / 5</h1>
+            </div>
+
+            <div class="game-question-container">
+                <h1 id="display-question"></h1>
+            </div>
+
+            <div class="game-options-container">
+
+                <div class="modal-container" id="option-modal">
+
+                    <div class="modal-content-container">
+                        <h1>Please Pick An Option</h1>
+
+                        <div class="modal-button-container">
+                            <button onclick="closeOptionModal()">Continue</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <span>
+                    <input type="radio" id="option-one" name="option" class="radio" value="optionA" />
+                    <label for="option-one" class="option" id="option-one-label"></label>
+                </span>
+
+
+                <span>
+                    <input type="radio" id="option-two" name="option" class="radio" value="optionB" />
+                    <label for="option-two" class="option" id="option-two-label"></label>
+                </span>
+
+
+                <span>
+                    <input type="radio" id="option-three" name="option" class="radio" value="optionC" />
+                    <label for="option-three" class="option" id="option-three-label"></label>
+                </span>
+
+
+                
+
+
+            </div>
+
+            <div class="next-button-container">
+                <button onclick="handleNextQuestion()">Next Question</button>
+            </div>
+
+        </div>
+
+    <!-- End of quiz -->
+    <div class="modal-container" id="score-modal">
+    
+        <div class="modal-content-container">
+    
+            <h1>Congratulations, Quiz Completed.</h1>
+    
+            <div class="grade-details">
+                <p>Attempts : 5</p>
+                <p>Wrong Answers : <span id="wrong-answers"></span></p>
+                <p>Right Answers : <span id="right-answers"></span></p>
+                <p>Grade : <span id="grade-percentage"></span>%</p>
+                <p><span id="remarks"></span></p>
+            </div>
+    
+            <div class="modal-button-container">
+                <button onclick="closeScoreModal()">Continue</button>
+            </div>
+    
+        </div>
+    </div>
+    </main>
+<script src="https://kit.fontawesome.com/489d8a9ea7.js" crossorigin="anonymous"></script>
+<script src="assets/js/script.js"></script>
+</body>
+</html>
